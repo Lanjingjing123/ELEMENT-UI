@@ -27,6 +27,7 @@ import bus from '../util/bus'
             }
         },
         mounted() {
+            console.log("attrs",this.$attrs);
             // 监听 msg 自定义事件，在App.vue 发起的自定义事件
             bus.$on('msg',(val)=>{
                 this.childMsg = val

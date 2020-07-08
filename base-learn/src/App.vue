@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <button @click="passMsg">传你</button>
-    <m-parent>
-    </m-parent>
+    <m-parent :msga="a" :msgb="b" :msgc="c"> </m-parent>
   </div>
 </template>
 
@@ -13,6 +12,13 @@
 import MParent from './views/Parent.vue'
 import bus from './util/bus'
 export default {
+  data() {
+    return {
+      a: 'msga',
+      b: 'msgb',
+      c: 'msgc'
+    }
+  },
   components:{
     MParent,
   },
